@@ -1,6 +1,10 @@
 {
     "name": "@tory.ir/react-atomic",
     "version": "0.0.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/kordeviant/react-atomic-state"
+    },
     "scripts": {
         "dev": "vite",
         "build": "tsc && vite build",
