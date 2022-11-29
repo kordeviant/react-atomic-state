@@ -1,31 +1,19 @@
-# Create a React Library with TypeScript and Vite
+# @tory.ir/react-atomic
 
-This repository is an example of a React library created with TypeScript and Vite.
+An atomic state manager just like recoil.
+Without the need to have a context provider in component tree.
+With selector functions rerendering only if the selected value is changed.
+In under 100 lines, plain and simple.
 
-## Getting Started
-
-First, install the dependencies of the monorepo:
-
-```bash
-yarn install
 ```
+const stateAtom = new Atom({ a: 1, b: 1 });
 
-Build the library:
-
-```bash
-cd packages/my-lib && yarn build
-```
-
-Run the development server of the test project:
-
-```bash
-cd sites/my-site && yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-If you want to start the storybook server, run:
-
-```bash
-cd packages/my-lib && yarn storybook
+// inside component
+    const setState = useAtomSetState(stateAtom);
+// or
+    const state = useAtomValue(stateAtom);
+// or
+    const selectedState = useAtomSelectValue(stateAtom,(x) => x.a);
+// or
+    const [state,setState] = useAtomState(stateAtom);
 ```
