@@ -66,7 +66,7 @@ export const useAtomSelectValue = <T, A>(atom: Atom<T>, selector: Selector<T, A>
 }
 export const useAtomSetState = <T>(atom: Atom<T>) => {
     const update = useCallback(
-        (x) => {
+        (x: (a: T) => T) => {
             atom.setValue(x)
         },
         [atom],
