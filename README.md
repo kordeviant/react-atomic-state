@@ -10,6 +10,10 @@ With selector functions rerendering only if the selected value is changed.
 
 `npm i @tory.ir/react-atomic `
 
+## demo
+
+[sandbox demo](https://codesandbox.io/s/tory-ir-react-atomic-s43ms1?file=/src/App.tsx)
+
 ```
 export const stateAtom = new Atom({ a: 1, b: 1 });
 
