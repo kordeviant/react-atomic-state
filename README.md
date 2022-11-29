@@ -8,6 +8,8 @@ Without the need to have a context provider in component tree.
 
 With selector functions rerendering only if the selected value is changed.
 
+`npm i @tory.ir/react-atomic `
+
 ```
 export const stateAtom = new Atom({ a: 1, b: 1 });
 
